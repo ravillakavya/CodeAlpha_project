@@ -1,0 +1,189 @@
+/* ==========================
+   GOOGLE FONT & RESET
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    overflow:hidden;
+}
+
+/* ==========================
+   Animated Background
+========================== */
+
+.background{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ==========================
+   Calculator
+========================== */
+
+.calculator{
+    width:370px;
+    padding:25px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    animation:fadeIn .8s ease;
+}
+
+/* ==========================
+   Title
+========================== */
+
+.top{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.top h2{
+    color:white;
+    font-size:28px;
+    font-weight:600;
+}
+
+/* ==========================
+   Display
+========================== */
+
+.display{
+    margin-bottom:20px;
+}
+
+#screen{
+    width:100%;
+    height:75px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    padding:15px;
+    font-size:32px;
+    text-align:right;
+    background:rgba(255,255,255,.9);
+    color:#222;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* ==========================
+   Buttons Grid
+========================== */
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+button{
+    height:65px;
+    border:none;
+    border-radius:15px;
+    font-size:22px;
+    cursor:pointer;
+    transition:.25s;
+    background:white;
+    color:#222;
+    box-shadow:0 5px 10px rgba(0,0,0,.15);
+}
+
+button:hover{
+    transform:translateY(-4px);
+    background:#f1f5f9;
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+/* ==========================
+   Operator Buttons
+========================== */
+
+.operator{
+    background:#2563eb;
+    color:white;
+}
+
+.operator:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================
+   Equal Button
+========================== */
+
+.equal{
+    background:#16a34a;
+    color:white;
+    grid-column:span 2;
+}
+
+.equal:hover{
+    background:#15803d;
+}
+
+/* ==========================
+   Animation
+========================== */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   Responsive Design
+========================== */
+
+@media(max-width:480px){
+
+.calculator{
+    width:95%;
+    padding:20px;
+}
+
+button{
+    height:58px;
+    font-size:20px;
+}
+
+#screen{
+    font-size:28px;
+    height:70px;
+}
+
+.top h2{
+    font-size:24px;
+}
+
+}
